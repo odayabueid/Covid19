@@ -20,7 +20,12 @@ export class AppComponent implements OnChanges {
   modalOpen=false
   mostDangerousCountries:any=[];
   dataSource: Object;
+  array=[]
+  throttle = 300;
+  scrollDistance = 1;
+  sum = 50
   constructor(public http:HttpClient){
+    this.test()
     this.http.get('https://api.covid19api.com/summary').subscribe((value:any)=>{
       this.globalData = value.Global;
       this.allCountriesData = value.Countries
@@ -56,12 +61,24 @@ export class AppComponent implements OnChanges {
       "data": this.mostDangerousCountries
       };
   }
-
+  test(){
+    for(var i = 0 ; i<this.sum ; i++){
+      this.array.push(i)
+    }
+  }
   ngOnChanges(){
+    
     console.log(this.elementDetails,"elementDetailselementDetails")
   }
   showResults(details){
     this.dataElement=details
+  }
+  onScroll(){
+    if(this.sum < 300){
+    this.sum = this.sum + 50
+    this.test()
+    console.log("HAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY")
+  }
   }
  
 }

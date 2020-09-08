@@ -15,6 +15,7 @@ import { CountryDetailsComponent } from './country-details/country-details.compo
 import { ModalComponent } from './modal/modal.component';
 import { FormsModule } from '@angular/forms';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 FusionChartsModule.fcRoot(FusionCharts, Charts)
 
@@ -36,7 +37,7 @@ FusionChartsModule.fcRoot(FusionCharts, Charts)
     FusionChartsModule,
     FormsModule,
     NgbModule,
-    
+    InfiniteScrollModule
   ],
   providers: [],
   bootstrap: [AppComponent]
