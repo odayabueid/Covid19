@@ -6,17 +6,17 @@
   </fusioncharts>
   </mat-grid-tile>
 </mat-grid-list>
+<mat-grid-list cols='1' rowHeight="55px">
+  <app-modal></app-modal>
+  </mat-grid-list> 
 <mat-grid-list cols='2' rowHeight="600px"> 
   <mat-grid-tile>
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="min-height: 680px;">
     <app-all-countries [allCountriesData]="allCountriesData" (elementDetails) = "showResults($event)">
     </app-all-countries>
-  </div>
   </mat-grid-tile>
   <mat-grid-tile>
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" class="video-title">
+      <div class="container mt-3">
       <app-country-details [dataElement]="dataElement">
-
       </app-country-details>
     </div>
   </mat-grid-tile>

@@ -17,6 +17,7 @@ export class AppComponent implements OnChanges {
   globalData:any={};
   allCountriesData:any=[];
   dataElement;
+  modalOpen=false
   mostDangerousCountries:any=[];
   dataSource: Object;
   constructor(public http:HttpClient){
@@ -55,13 +56,14 @@ export class AppComponent implements OnChanges {
       "data": this.mostDangerousCountries
       };
   }
-  
+
   ngOnChanges(){
     console.log(this.elementDetails,"elementDetailselementDetails")
   }
   showResults(details){
     this.dataElement=details
   }
+ 
 }
 const dataset = [{
   "id": "NA",

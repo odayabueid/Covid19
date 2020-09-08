@@ -18,7 +18,7 @@
       </tr>
       </thead>
       <tbody>
-      <tr *ngFor="let country of allCountriesData | filter:searchText" style="cursor:pointer" (click)="elementData(country)">
+      <tr *ngFor="let country of allCountriesData | filter:searchText"  [ngStyle]="{borderBottom : country.Country == countrySelected ? '3px solid #3995d2' : ''}" style="cursor:pointer;margin: 5px 0;" (click)="elementData(country)">
         <td style="text-align: center;">{{country.Country}}</td>
         <td style="text-align: center;">{{country.TotalConfirmed}}</td>
         <td style="text-align: center;">{{country.TotalRecovered}}</td>

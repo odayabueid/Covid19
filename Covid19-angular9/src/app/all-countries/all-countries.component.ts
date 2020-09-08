@@ -13,7 +13,7 @@ export class AllCountriesComponent implements OnChanges {
   title = 'COVID 19 Summary';
   searchText;
   elementObj;
-  
+  countrySelected:string=''
     constructor() { }
 
 
@@ -27,6 +27,8 @@ export class AllCountriesComponent implements OnChanges {
   }
 
   elementData(data){
+    this.countrySelected = data.Country
+    console.log(data.Country)
     this.elementObj = data
     this.elementDetails.emit(this.elementObj);
   }
