@@ -1,0 +1,34 @@
+
+<div class="col-xs-12 col-sm-12 col-md-12 container">
+      <div class="search-hero">
+      <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Start searching for a Country by name">
+    </div>
+  <div class="row">
+    <div>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th style="text-align: center;">Country</th>
+        <th style="text-align: center;">TotalConfirmed</th>
+        <th style="text-align: center;">TotalRecovered</th>
+        <th style="text-align: center;">TotalDeaths</th>
+        <th style="text-align: center;">NewConfirmed</th>
+        <th style="text-align: center;">NewRecovered</th>
+        <th style="text-align: center;">NewDeaths</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let country of allCountriesData | filter:searchText" style="cursor:pointer" (click)="elementData(country)">
+        <td style="text-align: center;">{{country.Country}}</td>
+        <td style="text-align: center;">{{country.TotalConfirmed}}</td>
+        <td style="text-align: center;">{{country.TotalRecovered}}</td>
+        <td style="text-align: center;">{{country.TotalDeaths}}</td>
+        <td style="text-align: center;">{{country.NewConfirmed}}</td>
+        <td style="text-align: center;">{{country.NewRecovered}}</td>
+        <td style="text-align: center;">{{country.NewDeaths}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+</div>

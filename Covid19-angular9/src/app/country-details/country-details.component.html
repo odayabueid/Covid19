@@ -1,0 +1,42 @@
+
+<div *ngIf="dataElement; else elseBlock" class="col-xs-12 col-sm-12 col-md-12" style="padding: 0px;margin-top: -194px;">
+<div class="col-md-12" style="margin-bottom: 20px;">
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="color: #3995d2;font-size: 25px; font-weight: bold;">
+     {{dataElement.Country}}
+    </div>
+    <div  class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="padding: 0px;">
+
+    </div>
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="color: #3995d2;font-size: 20px; font-weight: bold;">
+      {{dataElement.Date}}
+    </div>
+</div>
+<div class="col-md-12" style="margin-bottom: 20px;font-size: 16px;">
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="color: #FFC300;font-weight: bold;">
+        TotalConfirmed:  {{dataElement.TotalConfirmed}}
+    </div>
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="color: #00CD3A;font-weight: bold;">
+        TotalRecovered:  {{dataElement.TotalRecovered}}
+    </div>
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="color: #f00;font-weight: bold;">
+        TotalDeaths:  {{dataElement.TotalDeaths}}
+    </div>
+</div>
+<div class="col-md-12" style="margin-bottom: 20px;font-size: 16px;">
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="color: #FFC300;font-weight: bold;">
+        NewConfirmed:  {{dataElement.NewConfirmed}}
+    </div>
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"  style="color: #00CD3A;font-weight: bold;">
+        NewRecovered:  {{dataElement.NewRecovered}}
+    </div>
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="color: #f00;font-weight: bold;">
+        NewDeaths:  {{dataElement.NewDeaths}}
+    </div>
+    </div>
+
+</div>
+<ng-template #elseBlock >
+    <div style="margin-top: -194px; font-size: 25px;color: #405065;">
+    Please Click on Country to Show the Details 
+</div>
+  </ng-template>
