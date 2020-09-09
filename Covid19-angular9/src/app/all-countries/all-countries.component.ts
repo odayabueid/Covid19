@@ -52,7 +52,7 @@ export class AllCountriesComponent implements OnChanges {
     }
     
 
-    onScroll(){
+     onScroll(){
       console.log("Ssssssssssssssssssaaaaaaaaaaaaa")
     }
   

@@ -12,7 +12,8 @@ import {HttpClient} from '@angular/common/http'
 })
 export class AppComponent implements OnChanges {
   @Input() elementDetails:any
-
+  public isCollapsed = false;
+  images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
   title = 'myapp';
   globalData:any={};
   allCountriesData:any=[];
@@ -73,6 +74,7 @@ export class AppComponent implements OnChanges {
   showResults(details){
     this.dataElement=details
   }
+  
   onScroll(){
     if(this.sum < 300){
     this.sum = this.sum + 50

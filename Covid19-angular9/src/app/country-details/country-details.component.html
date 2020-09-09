@@ -1,41 +1,66 @@
-
-    <div *ngIf="dataElement; else elseBlock" class="col-xs-12 col-sm-12 col-md-12" style="padding: 0px;margin-top: -194px;">
-    <div class="row" style="margin: 10px 0;">
-        <div class="col-md-4" style="color: #3995d2;font-size: 25px; font-weight: bold;">
-                  {{dataElement.Country}}
+<!-- <div class="card" style="width: 18rem;">
+        <img src="https://news.cgtn.com/news/3d3d674d30596a4e34457a6333566d54/img/0d9f3a65be2745e78c6841e6d028f506/0d9f3a65be2745e78c6841e6d028f506.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
-        <div class="col-md-4">
-
-        </div>
-        <div class="col-md-4" style="color: #3995d2;font-size: 20px; font-weight: bold;">
-                      {{dataElement.Date}}
-        </div>
+      </div> -->
+<!-- <div class="alert alert-primary" role="alert">
+  A simple primary alert—check it out!
+</div> -->
+<div
+  *ngIf="dataElement; else elseBlock"
+  class="col-xs-12 col-sm-12 col-md-12"
+  style="padding: 0px; margin-top: -194px"
+>
+  <div class="row" style="margin: 10px 0">
+    <div
+      class="col-md-4"
+      style="color: #3995d2; font-size: 25px; font-weight: bold"
+    >
+      {{ dataElement.Country }}
     </div>
-        <div class="row"  style="margin: 10px 0;">
-        <div class="col-md-4"  style="color: #FFC300;font-weight: bold;">
-            TotalConfirmed:  {{dataElement.TotalConfirmed}}
-        </div>
-        <div class="col-md-4" style="color: #00CD3A;font-weight: bold;">
-            TotalRecovered:  {{dataElement.TotalRecovered}}
-        </div>
-        <div class="col-md-4" style="color: #f00;font-weight: bold;">
-            TotalDeaths:  {{dataElement.TotalDeaths}}
-        </div>
+    <div class="col-md-4"></div>
+    <div
+      class="col-md-4"
+      style="color: #3995d2; font-size: 20px; font-weight: bold"
+    >
+      {{ dataElement.Date }}
     </div>
-        <div class="row"  style="margin: 10px 0;">
-        <div class="col-md-4"  style="color: #FFC300;font-weight: bold;">
-            NewConfirmed:  {{dataElement.NewConfirmed}}
-        </div>
-        <div class="col-md-4" style="color: #00CD3A;font-weight: bold;">
-            NewRecovered:  {{dataElement.NewRecovered}}
-        </div>
-        <div class="col-md-4"  style="color: #f00;font-weight: bold;">
-            NewDeaths:  {{dataElement.NewDeaths}}
-        </div>
+  </div>
+  <div class="row" style="margin: 10px 0">
+    <div class="col-md-4" style="color: #ffc300; font-weight: bold">
+      TotalConfirmed: {{ dataElement.TotalConfirmed }}
     </div>
+    <div class="col-md-4" style="color: #00cd3a; font-weight: bold">
+      TotalRecovered: {{ dataElement.TotalRecovered }}
     </div>
-<ng-template #elseBlock >
-    <div style="margin-top: -194px; font-size: 25px;color: #405065;text-align: center;">
-    Please Click on Country to Show the Details 
+    <div class="col-md-4" style="color: #f00; font-weight: bold">
+      TotalDeaths: {{ dataElement.TotalDeaths }}
+    </div>
+  </div>
+  <div class="row" style="margin: 10px 0">
+    <div class="col-md-4" style="color: #ffc300; font-weight: bold">
+      NewConfirmed: {{ dataElement.NewConfirmed }}
+    </div>
+    <div class="col-md-4" style="color: #00cd3a; font-weight: bold">
+      NewRecovered: {{ dataElement.NewRecovered }}
+    </div>
+    <div class="col-md-4" style="color: #f00; font-weight: bold">
+      NewDeaths: {{ dataElement.NewDeaths }}
+    </div>
+  </div>
 </div>
-  </ng-template>
+<ng-template #elseBlock>
+  <div
+    style="
+      margin-top: -194px;
+      font-size: 25px;
+      color: #405065;
+      text-align: center;
+    "
+  >
+    Please Click on Country to Show the Details
+  </div>
+</ng-template>
