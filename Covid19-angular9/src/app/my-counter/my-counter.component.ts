@@ -15,7 +15,7 @@ export class MyCounterComponent {
     this.count$ = store.pipe(select('count'));
     this.count$.subscribe((counter)=>{
       this.countObj = counter
-      console.log(this.countObj)
+      // console.log(this.countObj)
     })
     // console.log(this.count$.subscribe((val)=>{
     //   console.log(val,"aaaaaaaaa")
@@ -39,7 +39,6 @@ export class MyCounterComponent {
     // TODO: Dispatch a reset action
   }
   name(value){
-    console.log(value)
     this.store.dispatch(name({value}))
   }
 

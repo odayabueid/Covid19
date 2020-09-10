@@ -11,7 +11,6 @@ export class CountryDetailsComponent implements OnChanges {
 
 
   ngOnChanges(){
-    console.log(this.dataElement,"dataElement FROOOOOOOOM CHIIIIIIIIIIIIILD")
   }
 
 }
